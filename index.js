@@ -13,6 +13,15 @@ function generateRandomPassword(length) {
   // Визначаємо випадковий індекс символу зі списку characters та округляємо до найбільшого цілого, яке менше.
   // Отримуємо символ з випадковим індексом.
   // Додаємо отриманий випадковий символ до паролю.
+ let str = "";
+  const characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  for (let i = 1; i < length; i++) {
+    let index = Math.floor(Math.random() * characters.length);
+    let randomSymbol = characters[index];
+    str += randomSymbol;
+  }
+  return str;
 }
 
 console.log("Завдання: 1 ==============================");
